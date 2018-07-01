@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rom_fp="$(date +%y%m%d)"
+
 export LC_ALL=C
 
 export RR_BUILDTYPE=Official
@@ -17,3 +19,7 @@ lunch treble_arm64_avN-userdebug
 #installclean
 make clean
 make clobber
+
+echo -e "Stopping jack server"
+./prebuilts/sdk/tools/jack-admin stop-server
+
