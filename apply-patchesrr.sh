@@ -2,7 +2,7 @@
 
 set -e
 
-patches=~/android/rrtreble/patches
+patches=/home/acar/android/rrtreble/patches
 localManifestBranch=android-8.1
 
 if [ -z "$local_patches" ];then
