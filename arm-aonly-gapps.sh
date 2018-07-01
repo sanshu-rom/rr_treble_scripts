@@ -8,6 +8,13 @@ export RR_BUILDTYPE=Official
 export days_to_log=7
 source build/envsetup.sh
 
+#doubledefination
+if [ -f vendor/rr/prebuilt/common/Android.mk ];then
+    sed -i \
+        -e 's/LOCAL_MODULE := Wallpapers/LOCAL_MODULE := WallpapersRR/g' \
+        vendor/rr/prebuilt/common/Android.mk
+fi
+
 #lunch
 lunch treble_arm_aoS-userdebug
 
