@@ -6,6 +6,8 @@ source=/home/acar/android/rrtreble/
 rom_fp="$(date +%y%m%d)"
 rom=rr
 jobs=16
+export RR_BUILDTYPE=Official
+export days_to_log=7
 
 mkdir -p release/$rom_fp/
 
