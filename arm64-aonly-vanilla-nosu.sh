@@ -18,6 +18,9 @@ fi
 #lunch
 lunch treble_arm64_avN-userdebug
 
+#make bigger
+sed -i -e 's/BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1610612736/BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2147483648/g' device/phh/treble/phhgsi_arm64_a/BoardConfig.mk
+
 #cache
 export USE_CCACHE=1
 ccache -M 100G
