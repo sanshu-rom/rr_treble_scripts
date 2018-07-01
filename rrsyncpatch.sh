@@ -7,6 +7,8 @@ rom_fp="$(date +%y%m%d)"
 rom=rr
 jobs=16
 
+mkdir -p release/$rom_fp/
+
 #clone local_manifests from phh repo
 if [ -d .repo/local_manifests ] ;then
 	( cd .repo/local_manifests; git fetch; git reset --hard; git checkout origin/$localManifestBranch)
