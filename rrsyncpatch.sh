@@ -29,3 +29,5 @@ rm -f device/*/sepolicy/common/private/genfs_contexts
 
 #apply patches
 bash apply-patchesrr.sh patches
+
+source build/envsetup.sh
