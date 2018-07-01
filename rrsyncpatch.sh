@@ -6,8 +6,6 @@ source=/home/acar/android/rrtreble/
 rom_fp="$(date +%y%m%d)"
 rom=rr
 jobs=16
-export RR_BUILDTYPE=Official
-export days_to_log=7
 
 mkdir -p release/$rom_fp/
 
@@ -29,5 +27,3 @@ rm -f device/*/sepolicy/common/private/genfs_contexts
 
 #apply patches
 bash apply-patchesrr.sh patches
-
-source build/envsetup.sh
